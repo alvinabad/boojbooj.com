@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+
+body {
+    background-color: #ddeeff; //white; //#E1F5F2;
+}
+a:link {
+	color: blue;
+}
+a:visited {
+	text-decoration: none;
+	color: blue;
+}
+#navigation a {
+	color: white;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: black;
+}
+#header {
+    /*background-color: #E1F5F2;*/
+    background-color: transparent;
+}
+#navigation{
+    background-color: #3B5998; //#3366ff;
+}
+
+#content {
+    background-color: white;
+}
+#footer {
+}
+div.message .sender {
+	color: #8B0000;
+}
+h1.header {
+    background-color: #ddeeff;
+}	 	 
+h1 {
+	color: #006699;
+}

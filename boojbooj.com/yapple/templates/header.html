@@ -1,0 +1,47 @@
+
+<div id="header">
+  <!-- 
+  <div id="header_logo">
+    <a href="/"><img id="logo" src="/static/images/yaploud_logo.gif" /></a>
+  </div>
+  <div id="header_title">
+    <h1>{{ info.title }}</h1>
+    <br />
+    <div id="share_this">
+    Share this on: 
+    <a target="_blank" href="http://www.facebook.com/share.php?u=http://yapple.yaploud.com/">
+    <img class="icon" src="http://static.ak.fbcdn.net/favicon.ico" alt="Facebook" />
+    </a>
+    <a target="_blank" 
+      href="http://twitter.com/home?status=Cool site to talk about YouTube videos: http://yapple.yaploud.com/. Please RT.">
+    <img class="icon" src="http://assets1.twitter.com/images/favicon.png" alt="Twitter" />
+    </a>
+    </div>
+  </div>
+  <div id="header_login">
+  {% if not info.username %}
+    {% if False %}
+    <a href="/account/login">Login: </a>
+    <a href="/account/google_auth"">
+      <img class="icon" src="http://www.google.com/favicon.ico"/></a>
+    <a href="/account/youtube_auth"">
+      <img class="icon" src="http://s.ytimg.com/yt/favicon-vfl86270.ico"/></a>
+    {% endif %}
+    
+    <a href="/account/twitter_auth"">
+      <img class="icon" src="http://assets1.twitter.com/images/favicon.png" />
+      Login using your Twitter account
+      </a>
+    
+  {% else %}
+    Hello, 
+    {% if info.twitter_username %}
+      <a target="_blank" href="http://twitter.com/{{info.twitter_username}}"> <b>{{info.username}}</b> </a> | 
+    {% else %}
+      <b>{{info.username}}</b> | 
+    {% endif %}
+    <a href="/account/logout?prev_url={{ info.full_path }}">(not you?) Logout</a>
+  {% endif %}
+  </div>
+  -->
+</div>

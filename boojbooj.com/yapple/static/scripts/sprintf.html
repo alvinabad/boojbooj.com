@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script src="sprintf.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    echo = function(s) { document.write(s); };
+    echo("<pre>");
+
+    var n =  43951789;
+    var u = -43951789;
+    var c = 65;
+    var d = 123.45678901234567890123456789;
+    var start = (new Date()).getTime();
+    echo(sprintf("%%b = '%b'<br />", n)); // binary representation
+    echo(sprintf("%%c = '%c'<br />", c)); // print the ascii character
+    echo(sprintf("%%d = '%+d'<br />", n)); // standard integer representation
+    echo(sprintf("%%d = '%d'<br />", u)); // standard integer representation
+    echo(sprintf("%%e = '%.10e'<br />", d)); // scientific notation
+    echo(sprintf("%%u = '%u'<br />", n)); // unsigned integer representation of a positive integer
+    echo(sprintf("%%u = '%u'<br />", u)); // unsigned integer representation of a negative integer
+    echo(sprintf("%%f = '%'-10.2f' and %%f = '%010.10f'<br />", d, d)); // floating point representation
+    echo(sprintf("%%o = '%o'<br />", n)); // octal representation
+    echo(sprintf("%%s = '%100.10s'<br />", "Ala-bala-portocala")); // string representation
+    echo(sprintf("%%x = '%x'<br />", n)); // hexadecimal representation (lower-case)
+    echo(sprintf("%%X = '%X'<br />", n)); // hexadecimal representation (upper-case)
+    echo(sprintf("<br />%4$s, %3$s, %1$s, %2$s", 'c', 'd', 'b', 'a'));
+    echo('<br />'+ ((new Date()).getTime() - start) / 1000 +"<br />");
+
+    function myassert(fact, message) {
+      if(!fact) echo("Assertion failed: "+ message +"<br />");
+    }
+
+    function assert_equal(a, b, msg) {
+      myassert(a == b, '("' + a + '" != "' + b + '") ' + msg);
+    }
+
+    function test() {
+      assert_equal(sprintf('foo%1dbar', 3), 'foo3bar', 'sprintf1');
+      assert_equal(sprintf('foo%02dbar', 3), 'foo03bar', 'sprintf1');
+      assert_equal(sprintf('foo%02dbar', 42), 'foo42bar', 'sprintf1');
+      assert_equal(sprintf('foo%dbar', 123), 'foo123bar', 'sprintf1');
+      a = sprintf('%2s', 'a');
+      b = ' a';
+      assert_equal(a.length, b.length, 'sprintf2.length');
+      assert_equal(a, b, 'sprintf2');
+      a = sprintf('%2s', 'aa');
+      b = 'aa';
+      assert_equal(a.length, b.length, 'sprintf3.length');
+      assert_equal(a, b, 'sprintf3');
+      a = sprintf('%4s', 'a');
+      b = '   a';
+      assert_equal(a.length, b.length, 'sprintf4.length');
+      assert_equal(a, b, 'sprintf4');
+    }
+
+    test();
+
+    echo("</pre>");
+  </script>
+</head>
+<body>
+</body>
+</html>

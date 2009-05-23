@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entry xmlns='http://www.w3.org/2005/Atom' xmlns:media='http://search.yahoo.com/mrss/'
+	xmlns:gd='http://schemas.google.com/g/2005' xmlns:yt='http://gdata.youtube.com/schemas/2007'>
+	<id>http://gdata.youtube.com/feeds/api/videos/ip1zsUIosoA
+	</id>
+	<published>2005-12-05T22:12:00.000Z</published>
+	<updated>2009-05-04T16:46:07.000Z</updated>
+	<category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+		term='Live' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+		term='Dont' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+		term='Journey' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+		term='believing' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat'
+		term='Stop' />
+	<category scheme='http://gdata.youtube.com/schemas/2007/categories.cat'
+		term='Music' label='Music' />
+	<title type='text'>Journey - Don't Stop believing</title>
+	<content type='text'>Live Journey - Don't Stop believing</content>
+	<link rel='alternate' type='text/html'
+		href='http://www.youtube.com/watch?v=ip1zsUIosoA' />
+	<link rel='http://gdata.youtube.com/schemas/2007#video.responses'
+		type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/ip1zsUIosoA/responses' />
+	<link rel='http://gdata.youtube.com/schemas/2007#video.related'
+		type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/ip1zsUIosoA/related' />
+	<link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html'
+		href='http://m.youtube.com/details?v=ip1zsUIosoA' />
+	<link rel='self' type='application/atom+xml'
+		href='http://gdata.youtube.com/feeds/api/videos/ip1zsUIosoA' />
+	<author>
+		<name>sharrralou</name>
+		<uri>http://gdata.youtube.com/feeds/api/users/sharrralou
+		</uri>
+	</author>
+	<gd:comments>
+		<gd:feedLink
+			href='http://gdata.youtube.com/feeds/api/videos/ip1zsUIosoA/comments'
+			countHint='33473' />
+	</gd:comments>
+	<media:group>
+		<media:category label='Music'
+			scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>Music</media:category>
+		<media:content
+			url='http://www.youtube.com/v/ip1zsUIosoA&amp;f=videos&amp;app=youtube_gdata'
+			type='application/x-shockwave-flash' medium='video' isDefault='true'
+			expression='full' duration='250' yt:format='5' />
+		<media:content
+			url='rtsp://rtsp2.youtube.com/CiILENy73wIaGQmAsihCsXOdihMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+			type='video/3gpp' medium='video' expression='full' duration='250'
+			yt:format='1' />
+		<media:content
+			url='rtsp://rtsp2.youtube.com/CiILENy73wIaGQmAsihCsXOdihMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp'
+			type='video/3gpp' medium='video' expression='full' duration='250'
+			yt:format='6' />
+		<media:description type='plain'>Live Journey - Don't
+			Stop believing</media:description>
+		<media:keywords>Journey, Dont, Stop, believing, Live
+		</media:keywords>
+		<media:player url='http://www.youtube.com/watch?v=ip1zsUIosoA' />
+		<media:thumbnail url='http://i.ytimg.com/vi/ip1zsUIosoA/2.jpg'
+			height='90' width='120' time='00:02:05' />
+		<media:thumbnail url='http://i.ytimg.com/vi/ip1zsUIosoA/1.jpg'
+			height='90' width='120' time='00:01:02.500' />
+		<media:thumbnail url='http://i.ytimg.com/vi/ip1zsUIosoA/3.jpg'
+			height='90' width='120' time='00:03:07.500' />
+		<media:thumbnail url='http://i.ytimg.com/vi/ip1zsUIosoA/0.jpg'
+			height='240' width='320' time='00:02:05' />
+		<media:title type='plain'>Journey - Don't Stop believing
+		</media:title>
+		<yt:duration seconds='250' />
+	</media:group>
+	<gd:rating average='4.8789935' max='5' min='1' numRaters='35337'
+		rel='http://schemas.google.com/g/2005#overall' />
+	<yt:statistics favoriteCount='85060' viewCount='16426058' />
+</entry>

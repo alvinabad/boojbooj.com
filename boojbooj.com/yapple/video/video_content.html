@@ -1,0 +1,72 @@
+  
+  <div class="content_inner">
+  <h1>Do you find anything interesting in this video?</h1>
+  <br />
+  <b>Enter URL of YouTube video</b>: 
+  <span class="small">(Example: http://www.youtube.com/watch?v=xxxxxxxx)</span> 
+  <br />
+  <form name="watch_video_form" method="GET" action="/video/" 
+        onsubmit="Video.watch(); return false;">
+  <input id="input_video_url" size="55" type="text" name="video_url" value="{{ info.video_url }}"/>
+  <input type="submit" value="Watch video"/>
+  </form>
+  </div>  
+  
+  <div class="content_inner">
+    <div id="youtube_div">
+      <div id="youtube_innerdiv">Loading...</div>  
+      </div>  
+    <div id="chat_div">
+      <div id="comment_div">
+        <textarea id="comment" type="text"></textarea>
+        <button id="add_comment_button">Add</button>
+      </div>
+      <div id="messages_div"></div>
+    </div>  
+  </div>  
+  
+  <div class="content_inner">
+  <div id="videoInfo" style="clear: both; display: none;">
+    <p>Player state: <span id="playerState">--</span></p>
+    <p>Current Time: <span id="videoCurrentTime">--:--</span> | 
+           Duration: <span id="videoDuration">--:--</span></p>
+    <p>Bytes Total: <span id="bytesTotal">--</span> | 
+      Start Bytes: <span id="startBytes">--</span> | 
+      Bytes Loaded: <span id="bytesLoaded">--</span></p>
+    <p>VideoID: <span id="video_id"></span>
+    <p>VideoURL: <span id="video_url"></span>
+  </div>
+  </div>  
+  
+  <div class="content_inner">
+    <div id="youtube_info">
+    <h1 class="header">Top YouTube Videos</h1>
+      <div id="most_popular_div">
+      <ol>
+      {% for video in info.video_urls %}
+        <li>
+        <a href="{{ video.url }}">
+        <img style="float: left; margin-right: 5px; height: 50px; border: 0;" src="{{ video.img }}" 
+             alt="{{ video.url }}" /></a>
+        Youtube ID: <a href="{{ video.url }}">{{ video.id }}</a>
+        <br />
+        Comments: {{ video.num_msgs }}
+        </li>
+        <div style="clear: both;"></div>
+        <br />
+      {% endfor %}
+      </ol>
+      </div>
+    </div>  
+    <div id="tweeter_info">
+      <h1 class="header" style="text-align: full;">
+        <span>Live Tweets</span>
+        <span style="font-size: 12px;">
+        <a href="#" onclick="Twitter.search(); return false;">(Refresh)</a>
+        </span>
+      </h1>
+      <div id="latest_tweets_div"></div>
+    </div>  
+  </div>
+  
+  

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+{% include 'templates/google_meta_tag.html' %}
+      
+{% include 'templates/css.html' %}
+{% include 'templates/javascript_tools.html' %}
+{% include 'templates/javascript_main.html' %}
+
+{% block javascript_apps %}
+    {% include 'templates/javascript_chat.html' %}
+    {% include 'templates/javascript_twitter.html' %}
+    {% include 'templates/javascript_youtube.html' %}
+{% endblock %}
+
+ <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% block header %}
+    {% include 'templates/header.html' %}
+    {% include 'templates/navigation.html' %}
+{% endblock %}
+
+{% block content %}{% endblock %}
+    
+{% block footer %}
+    {% include 'templates/footer.html' %}
+{% endblock %}
+</body>
+</html>
+

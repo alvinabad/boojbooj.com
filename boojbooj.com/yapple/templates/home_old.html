@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include 'templates/google_meta_tag.html' %}
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      
+{% include 'templates/css.html' %}
+{% include 'templates/javascript_tools.html' %}
+{% include 'templates/javascript_main.html' %}
+
+{% include 'templates/javascript_chat.html' %}
+{% include 'templates/javascript_twitter.html' %}
+{% include 'templates/javascript_youtube.html' %}
+{% include 'templates/kampyle_head.html' %}
+      
+<title>{{ info.title }}</title>
+</head>
+<body>
+
+{% include 'templates/header.html' %}
+{% include 'templates/navigation.html' %}
+
+<div id="content">
+  {% include 'video/video_content.html' %}
+</div>
+
+{% include 'templates/footer.html' %}
+
+</body>
+</html>

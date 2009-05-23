@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>{{ info.title }}</title>
+  {% for src in info.css_src %}
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ src }}"/>
+  {% endfor %}
+  <script type="text/javascript">
+    var video_id = "{{ info.video_id }}"; 
+  </script>
+  {% for src in info.javascript_src %}
+  <script src="{{ src }}" type="text/javascript"></script>
+  {% endfor %}
+  
+</head>
+<body>
+<div id="title_div">
+    <a href="/" target="_blank">
+    <img id="yaploud_logo" src="/static/images/yaploud_logo.gif" alt="YapLoud" /></a>
+    <h2 id="title"> {{ info.message }} </h2>
+    <span style="vertical-align: top; font-weight: bold;">Share</span>
+    <a href="http://twitter.com/home?status=Cool site to talk about YouTube videos: http://yapple.yaploud.com/. Please RT."
+       target="_blank" >
+       <img class="icon" src="http://assets1.twitter.com/images/favicon.png" alt="Twitter" /></a>
+    <a href="http://www.facebook.com/share.php?u=http://yapple.yaploud.com/"
+       target="_blank" >
+      <img class="icon" src="http://static.ak.fbcdn.net/favicon.ico" alt="Facebook" /></a>
+</div>
+<div style="clear:both;"></div>
+<br />
+<form method="GET">
+  <label>Enter Youtube URL:</label>
+  <br />
+  <input id="input_video_url" size="65" type="text" name="video_url" value="{{ info.video_url }}"/>
+  <input type="submit" value="Go"/>
+  <a href="/video/">Reset</a>
+</form>
+
+<div id="main">
+  {% if info.video_id %}
+  <table>
+  <tr>
+  <td id="video_td">
+  <div id="youtube_div">Loading...</div>
+  </td>
+  <td id="chat_div">
+  <div id="chatDiv">
+      <div id="header">
+      </div>
+      <div id="user_greeting"></div>
+      <div class="separator_class">Current time: <span id="video_currenttime">--:--</span></div>
+      <div id="text"><textarea id="text_message" type="text" ></textarea></div>
+      <div id="messages"></div>
+      <div id="separator_div"></div>
+      <div id="controls"></div>
+      <div id="footer"></div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  {% endif %}
+  
+  <p />
+  <div class="separator_class"></div>
+  <div id="most_popular">
+  <b>Most popular:</b>
+  <ol>
+  {% for video in info.video_urls %}
+    <li>
+    <a href="{{ video.url }}">
+    <img style="float: left; margin-right: 5px;" src="{{ video.img }}" 
+         alt="{{ video.url }}" /></a>
+    Youtube ID: <a href="{{ video.url }}">{{ video.id }}</a>
+    <br />
+    Comments: {{ video.num_msgs }}
+    </li>
+    <div style="clear: both;"></div>
+    <br />
+  {% endfor %}
+  </ol>
+  </div>
+  <div id="twitter">
+  </div>
+  
+</div>
+
+<div class="separator_class"></div>
+
+  <div id="videoInfo">
+    <p>Player state: <span id="playerState">--</span></p>
+    <p>Current Time: <span id="videoCurrentTime">--:--</span> | 
+           Duration: <span id="videoDuration">--:--</span></p>
+    <p>Bytes Total: <span id="bytesTotal">--</span> | 
+      Start Bytes: <span id="startBytes">--</span> | 
+      Bytes Loaded: <span id="bytesLoaded">--</span></p>
+    <p>VideoID: <span id="video_id"></span>
+    <p>VideoURL: <span id="video_url"></span>
+  </div>
+
+</body>
+</html>

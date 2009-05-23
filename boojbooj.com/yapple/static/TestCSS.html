@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Test CSS</title>
+<link rel="stylesheet" type="text/css" media="screen" href="styles/TestCSS.css"/>
+<script type="text/javascript"
+        src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.corner.js"></script>
+<script type="text/javascript" src="scripts/TestCSS.js"></script>
+</head>
+<body>
+<h1 id="h1_element">Hello Test CSS</h1>
+
+<div id="main_window" class="win">
+  <div class="title_header">MAIN PANEL</div>
+<div id="header_window" class="win">
+  <div class="title_header">HEADER PANEL</div>
+</div>
+<div id="left_window" class="win">
+  <div class="title_header">LEFT PANEL</div>
+</div>
+<div id="middle_window" class="win">
+  <div class="title_header">MIDDLE PANEL</div>
+</div>
+<div id="right_window" class="win">
+  <div class="title_header">RIGHT PANEL</div>
+  hello <br />
+  hello <br />
+  hello <br />
+  hello <br />
+  hello <br />
+  hello <br />
+  hello <br />
+</div>
+<div id="footer_window" class="win">
+  <div class="title_header">FOOTER PANEL</div>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+    function display() {
+        var x = document.getElementById("h1_element");
+        for(var i in x) {
+            document.writeln(i);
+            document.writeln("<br/>");
+        }
+    }
+    //display();
+</script>
+</body>
+</html>

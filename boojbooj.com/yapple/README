@@ -1,0 +1,14 @@
+
+Dependencies:
+
+1. EPEL repository
+rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-3.noarch.rpm
+2. Memcache
+    yum install memcached
+    yum install python-memcached
+3. Optional LightHttpd
+    yum install lighttpd
+
+4. Install hashlib
+   http://code.krypto.org/python/hashlib/hashlib-20081119.tar.gz
+

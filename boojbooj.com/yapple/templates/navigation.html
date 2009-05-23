@@ -1,0 +1,38 @@
+
+
+<div id="navigation">
+    <div class="tabs"> <a href="/">Home</a> </div>
+    {% if False %}
+    <div class="tabs"> <a href="/account/">MyAccount</a> </div>
+    {% endif %}
+    <div class="tabs"> <a href="/site/about/">About</a> </div>
+    <div class="tabs"> <a href="/site/contact/">Contact</a> </div>
+    <div class="tabs"> <a href="http://boojbooj.wordpress.com/">Blog</a> </div>
+    
+    <div id="header_login">
+  {% if not info.username %}
+    {% if False %}
+    <a href="/account/login">Login: </a>
+    <a href="/account/google_auth"">
+      <img class="icon" src="http://www.google.com/favicon.ico"/></a>
+    <a href="/account/youtube_auth"">
+      <img class="icon" src="http://s.ytimg.com/yt/favicon-vfl86270.ico"/></a>
+    {% endif %}
+    
+    <a href="/account/twitter_auth"">
+      <img class="icon" src="http://assets1.twitter.com/images/favicon.png" />
+      Login using your Twitter account
+      </a>
+    
+  {% else %}
+    {% if info.twitter_username %}
+      <a target="_blank" href="http://twitter.com/{{info.twitter_username}}"> <b>{{info.username}}</b> </a> | 
+    {% else %}
+      <b>{{info.username}}</b> | 
+    {% endif %}
+    <a href="/account/logout?prev_url={{ info.full_path }}">(not you?) Logout</a>
+  {% endif %}
+  </div>
+    
+</div>
+

@@ -1,0 +1,205 @@
+@CHARSET "ISO-8859-1";
+
+/*
+* {
+    padding: 0;
+    margin: 0;
+}
+*/
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+img#logo {
+	float: left;
+	margin-right: .5em;
+	border: 0;
+}
+img.icon {
+	height: 16px;
+	border: 0;
+}
+img.icon2 {
+	height: 20px;
+	border: 0;
+}
+#header_logo {
+    float: left;
+}
+#header_login {
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+#header_title {
+	float: left;
+}
+#share_this {
+	float: left;
+}
+input {
+}
+textarea#comment {
+	width: 250px;
+	height: 34px;
+	border: 1px solid gray;
+	padding: 2px;
+    float: left;
+    margin: 2px;
+	overflow: auto;
+}
+div.clear {
+	clear: both;
+}
+.message {
+	width: 250px;
+	height: 50px;
+	border-bottom: 1px dashed;
+	overflow: hidden;
+	float: left;
+    clear: both;
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-left: 2px;
+    padding-top: 0;
+}
+.sender {
+	margin: 0;
+	padding 0;
+	float: left;
+    font-size: 12px;
+}
+.msg {
+	padding: 0;
+	margin: 0;
+    font-size: 12px;
+}
+.msg_time {
+	font-size: 9px;
+	color: gray;
+	float: right;
+}
+.tweet_this_div {
+    float: left;   
+}
+.tweet_this {
+	height: 16px;
+    margin: 5px;
+	border: 0;
+	float: left;
+}
+#comment_div {
+    float: left;
+    clear: both;
+}
+#messages_div {
+    overflow: auto;
+    float: left;
+    clear: both;
+    //border: 1px solid brown;
+    height: 250px;
+    margin: 2px;
+    width: 300px;
+    line-height: 15px;
+}
+#add_comment_button {
+    height: 38px;
+    margin: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#header {
+	margin-top: .5em;
+}
+#navigation {
+	width: 870px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/*
+	padding-left: 10%;
+	padding-right: 2%;
+	*/
+	margin-bottom: .5em;
+	height: 2em;
+}
+
+#navigation .tabs {
+    float: left;
+    border-right: .1em solid;
+	height: 2em;
+}
+.tabs a {
+    padding-left: 2em;
+    padding-right: 2em;
+	//height: 100%;
+	line-height: 2em;
+}
+
+#content {
+	width: 870px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 500px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.content_inner {
+	width: 830px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+#youtube_div {
+	/*border: 1px solid gray; */
+	width: 500px;
+	margin-top: 10px;
+	float: left;
+}
+#chat_div {
+	border: 1px solid gray;
+	width: 310px;
+	height: 300px;
+	margin-top: 10px;
+	float: right;
+}
+#youtube_info {
+	border: 1px solid gray;
+	width: 400px;
+	height: 450px;
+	float: left;
+	margin-top: 10px;
+}
+#tweeter_info {
+	border: 1px solid gray;
+	width: 400px;
+	height: 450px;
+	float: right;
+	margin-top: 10px;
+}
+#most_popular_div {
+	margin-top: 5px;
+	margin-left: 5px;
+	height: 400px;
+	overflow: auto;
+}
+#latest_tweets_div {
+	margin-top: 5px;
+	margin-left: 5px;
+	height: 400px;
+	overflow: auto;
+}
+.twitter_img {
+	height: 50px;
+}
+#footer {
+    border-top: 1px solid gray;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+}	
+h1.header {
+    padding: 5px;
+}

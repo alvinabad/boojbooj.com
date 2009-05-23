@@ -1,0 +1,21 @@
+#dtm-sparky-100 .hd { height:91px; padding:29px 0 0 0; margin:0; background:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/header.gif) top left no-repeat #000000; text-align:center; }
+#dtm-sparky-100 .bd { height:160px; background:#666666; padding:0; margin:0; }
+#dtm-sparky-100 .bd .loading { height:133px; }
+#dtm-sparky-100 .ad { display:none; height:0; padding:0; margin:0; }
+#dtm-sparky-100 .ft { height:10px; background:#666666; padding:4px 0 6px 0; margin:0; }
+
+#dtm-sparky-100 .yui-nav { background:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_bg.gif) bottom left no-repeat #ffffff; padding:3px 0 2px 0; }
+
+#dtm-sparky-100 .yui-navset .yui-content .tabContent { height:110px; width:150px; margin:26px 4px 0 4px; padding:0; border:1px solid #5D5D5D; }
+#dtm-sparky-100 .yui-navset .yui-content .tabContentMore { position:absolute; top:28px; margin-left:5px; }
+
+#dtm-sparky-100 .yui-nav li { height:17px; }
+#dtm-sparky-100 .yui-nav li a div { height:16px; }
+#dtm-sparky-100 .yui-nav li a div.sparkyTabPhotos { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_photos.png); width:42px; }
+#dtm-sparky-100 .yui-nav li.selected a div.sparkyTabPhotos { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_photos_f2.png); }
+#dtm-sparky-100 .yui-nav li a div.sparkyTabVideos { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_video.png); width:33px; }
+#dtm-sparky-100 .yui-nav li.selected a div.sparkyTabVideos { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_video_f2.png); }
+#dtm-sparky-100 .yui-nav li a div.sparkyTabArticles { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_articles.png); width:44px; }
+#dtm-sparky-100 .yui-nav li.selected a div.sparkyTabArticles { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_articles_f2.png); }
+#dtm-sparky-100 .yui-nav li a div.sparkyTabBlogs { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_blogs.png); width:35px; }
+#dtm-sparky-100 .yui-nav li.selected a div.sparkyTabBlogs { background-image:url(http://partners.dogtime.com/network/0.0.1/core/sparky/i/variations/160x300/mediacenter/nav_blogs_f2.png); }
