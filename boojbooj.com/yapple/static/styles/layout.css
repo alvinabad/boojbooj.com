@@ -137,6 +137,14 @@ div.clear {
 	line-height: 2em;
 }
 
+#logo {
+    float: left;
+	height: 2em;
+    padding-left: 1em;
+    padding-right: 2em;
+	line-height: 2em;
+}
+	
 #content {
 	width: 870px;
 	overflow: auto;

@@ -15,13 +15,13 @@ log = logger.log
 from auth import oauthtwitter
 
 def video(request, video_id=None):
-    info = {}
+    info = settings.INFO
+    
     video_url = ""   #random.choice(settings.YOU_TUBE_URLS)
     
     vm = VideoMessages()       
     info['video_urls'] = vm.getVideos()
     info['message'] = "Add comments to your favorite YouTube videos"
-    info['title'] = "Twitter + YouTube"
     info['video_url'] = video_url  
     info['video_id'] = video_id  
     info['javascript_src'] = settings.JAVASCRIPT_SRC

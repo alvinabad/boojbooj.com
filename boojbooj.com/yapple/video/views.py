@@ -15,7 +15,8 @@ log = logger.log
 from auth import oauthtwitter
 
 def index(request):
-    info = {}
+    info = settings.INFO
+    
     #video_url = settings.DEFAULT_YOUTUBE_URL
     video_url = random.choice(settings.YOU_TUBE_URLS)
     
@@ -39,7 +40,6 @@ def index(request):
     #info['video_urls'] = vm.getVideoUrls()
     info['video_urls'] = vm.getVideos()
     info['message'] = "Add comments to your favorite YouTube videos"
-    info['title'] = "Twitter + YouTube"
     info['video_url'] = video_url  
     info['video_id'] = video_id  
     info['javascript_src'] = settings.JAVASCRIPT_SRC
@@ -145,7 +145,7 @@ def test(request):
         
     info = {}
     info['message'] = "Watch and Chat"
-    info['title'] = "Yapple Video Chatter"
+    info.update(settings.INFO)
     
     template = os.path.join(settings.HOME_PATH, 'video', 'test_t.html')
     t = loader.get_template(template)
