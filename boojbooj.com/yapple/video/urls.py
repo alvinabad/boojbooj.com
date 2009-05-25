@@ -8,7 +8,8 @@ views_module = '.'.join(views_module)
 
 urlpatterns = patterns(views_module,
     (r'^$', 'index'),
-    (r'^test$', 'test'),
+    (r'^(?P<video_id>[A-Za-z0-9_-]+)$', 'index'),
     (r'^sendMessage/$', 'sendMessage'),
     (r'^getMessages/$', 'getMessages'),
+    (r'^test$', 'test'),
 )

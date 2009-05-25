@@ -1,0 +1,23 @@
+
+<script type="text/javascript">
+    var video_id = "{{ info.video_id }}"; 
+    var youtube_url = "{{ info.youtube_url }}"; 
+    var video_url = "{{ info.video_url }}"; 
+    var username = "{{ info.username }}";
+    var profile_image_url = "{{ info.profile_image_url }}";
+
+    if (typeof(Video) == "undefined") {
+        Video = {};
+    }
+
+    if (typeof(Youtube) == "undefined") {
+        Youtube = {};
+    }
+
+    Video.url = video_url;
+    Video.id = video_id;
+    Youtube.url = youtube_url;
+    
+</script>
+  
+<script type="text/javascript" src="/static/scripts/main.js"></script>

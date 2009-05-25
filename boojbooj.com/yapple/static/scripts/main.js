@@ -6,7 +6,9 @@ if (typeof console !== 'undefined') {
 	logger = console;
 }
 
-var Video = {};
+if (typeof(Video) == "undefined") {
+    Video = {};
+}
 
 var origBackgroundColor;
 Highlight = function(e) {

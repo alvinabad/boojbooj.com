@@ -144,6 +144,13 @@ div.clear {
     padding-right: 2em;
 	line-height: 2em;
 }
+#logoname {
+    float: left;
+	height: 2em;
+    padding-left: 1em;
+    padding-right: 2em;
+	//line-height: 2em;
+}
 	
 #content {
 	width: 870px;

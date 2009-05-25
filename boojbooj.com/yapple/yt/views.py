@@ -14,7 +14,7 @@ log = logger.log
 
 from auth import oauthtwitter
 
-def video(request, video_id=None):
+def video_old(request, video_id=None):
     info = settings.INFO
     
     video_url = ""   #random.choice(settings.YOU_TUBE_URLS)
@@ -27,6 +27,8 @@ def video(request, video_id=None):
     info['javascript_src'] = settings.JAVASCRIPT_SRC
     info['css_src'] = settings.CSS_SRC
     info['full_path'] = request.get_full_path()
+    
+    print "XXXXXXXXXXXXXXXXXXXXXXXXXXXX:", video_url, video_id
     
     try:
         info['username'] = request.session['username']

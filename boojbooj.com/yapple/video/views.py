@@ -14,32 +14,46 @@ log = logger.log
 
 from auth import oauthtwitter
 
-def index(request):
+def index(request, video_id=None):
     info = settings.INFO
     
-    #video_url = settings.DEFAULT_YOUTUBE_URL
-    video_url = random.choice(settings.YOU_TUBE_URLS)
-    
     try:
-        video_url = request.REQUEST['video_url']
+        youtube_url = request.REQUEST['youtube_url']
+        youtube_url = youtube_url.strip()
+        video_id = None
     except:
-        pass
+        youtube_url = None
         
-    video_id = None
-    try:
-        m = re.match(".*\?v=([A-Za-z0-9_-]+)", video_url)
-        video_id = m.groups()[0]
-    except:
+    if youtube_url == "":
+        youtube_url = None
+        
+        
+    if video_id is not None:
+        youtube_url = "http://www.youtube.com/watch?v=%s" % video_id
+        
+    if youtube_url is None:
+        youtube_url = random.choice(settings.YOU_TUBE_URLS)
+        video_id = None
+        
+    # extract video_id from video_url
+    if video_id is None:
         try:
-            m = re.match(".*\/v\/([A-Za-z0-9_-]+)", video_url)
+            m = re.match(".*\?v=([A-Za-z0-9_-]+)", youtube_url)
             video_id = m.groups()[0]
         except:
-            pass
-        
+            try:
+                m = re.match(".*\/v\/([A-Za-z0-9_-]+)", youtube_url)
+                video_id = m.groups()[0]
+            except:
+                pass
+    
+    video_url = "http://" + request.get_host() + "/yt/%s" % video_id
+    
     vm = VideoMessages()       
     #info['video_urls'] = vm.getVideoUrls()
     info['video_urls'] = vm.getVideos()
     info['message'] = "Add comments to your favorite YouTube videos"
+    info['youtube_url'] = youtube_url  
     info['video_url'] = video_url  
     info['video_id'] = video_id  
     info['javascript_src'] = settings.JAVASCRIPT_SRC

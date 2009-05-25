@@ -50,3 +50,10 @@ h6 {
 #latest_tweets_div {
     font-size: 12px;
 }
+#logoname {
+    font-size: 23px;
+    font-weight: bold;
+    //font-family: "Times New Roman";
+    font-family: "Georgia", sans-serif;
+    color: yellow;
+}

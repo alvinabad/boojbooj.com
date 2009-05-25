@@ -1,14 +1,17 @@
   
   <div class="content_inner">
     <div style="float:left;">
-      <h1>Watch videos and interact with your friends</h1>
+      <h1>Watch videos and interact with your friends!</h1>
       <br />
       <b>Enter URL of YouTube video</b>: 
       <span class="small">(Example: http://www.youtube.com/watch?v=xxxxxxxx)</span> 
       <br />
-      <form name="watch_video_form" method="GET" action="/video/" 
+      <form name="watch_video_form" method="GET">
+      <!-- 
+       action="/video/" 
             onsubmit="Video.watch(); return false;">
-      <input id="input_video_url" size="55" type="text" name="video_url" value="{{ info.video_url }}"/>
+       -->
+      <input id="input_video_url" size="55" type="text" name="youtube_url" value="{{ info.youtube_url }}"/>
       <input type="submit" value="Watch video"/>
       </form>
     </div>
@@ -16,7 +19,7 @@
     <div style="float:right;">
       <img class="icon" src="http://assets1.twitter.com/images/favicon.png" alt="Twitter" />
       <a target="_blank" 
-         href="http://twitter.com/home?status=Cool site about YouTube videos: http://boojbooj.com/">
+         href="http://twitter.com/home?status=Cool site: {{ info.video_url }}">
       Tweet about this 
       </a>
     </div>  

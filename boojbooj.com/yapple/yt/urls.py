@@ -2,6 +2,10 @@ from django.conf.urls.defaults import *
 
 import settings
 
-urlpatterns = patterns('%s.yt.views' % settings.PROJECT_NAME,
-    (r'^(?P<video_id>[A-Za-z0-9_-]+)$', 'video'),
+views_module = __name__.split('.')
+views_module[2] = 'views'
+views_module = '.'.join(views_module)
+
+urlpatterns = patterns(views_module,
+#    (r'^(?P<video_id>[A-Za-z0-9_-]+)$', 'video'),
 )

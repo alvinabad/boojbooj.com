@@ -2,6 +2,10 @@ from django.conf.urls.defaults import *
 
 import settings
 
-urlpatterns = patterns('%s.%s.views' % (settings.PROJECT_NAME, settings.HOME_APP),
-    (r'^$', 'index'),
+views_module = __name__.split('.')
+views_module[2] = 'views'
+views_module = '.'.join(views_module)
+
+urlpatterns = patterns(views_module,
+#    (r'^$', 'index'),
 )
