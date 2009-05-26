@@ -153,7 +153,7 @@ div.clear {
 }
 	
 #content {
-	width: 870px;
+	width: 875px;
 	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
@@ -162,7 +162,7 @@ div.clear {
 	padding-bottom: 10px;
 }
 .content_inner {
-	width: 830px;
+	width: 835px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
@@ -175,7 +175,7 @@ div.clear {
 }
 #chat_div {
 	border: 1px solid gray;
-	width: 310px;
+	width: 315px;
 	height: 300px;
 	margin-top: 10px;
 	float: right;
