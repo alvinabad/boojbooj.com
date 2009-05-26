@@ -65,12 +65,12 @@ def index(request, video_id=None):
     try:
         info['username'] = request.session['username']
     except:
-        print "NO LOGIN USER"
+        pass
         
     try:
         info['twitter_username'] = request.session['twitter_username']
     except:
-        print "NO TWITTER USER"
+        pass
     
     
     request.session['previous_url'] = request.get_full_path();
