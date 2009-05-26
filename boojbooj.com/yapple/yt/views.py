@@ -14,8 +14,9 @@ log = logger.log
 
 from auth import oauthtwitter
 
-def video_old(request, video_id=None):
-    info = settings.INFO
+def video_deprecated(request, video_id=None):
+    info = {}
+    info.update(settings.INFO)
     
     video_url = ""   #random.choice(settings.YOU_TUBE_URLS)
     

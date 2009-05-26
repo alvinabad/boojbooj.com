@@ -15,7 +15,8 @@ log = logger.log
 from auth import oauthtwitter
 
 def index(request, video_id=None):
-    info = settings.INFO
+    info = {}
+    info.update(settings.INFO)
     
     try:
         youtube_url = request.REQUEST['youtube_url']
@@ -62,20 +63,16 @@ def index(request, video_id=None):
     info['full_path'] = request.get_full_path()
     
     try:
-        request.session['username'] = settings.USERNAME
-    except:
-        pass
-    
-    try:
         info['username'] = request.session['username']
     except:
-        pass
+        print "NO LOGIN USER"
         
     try:
         info['twitter_username'] = request.session['twitter_username']
     except:
-        pass
-        
+        print "NO TWITTER USER"
+    
+    
     request.session['previous_url'] = request.get_full_path();
         
     #template = os.path.join(settings.HOME_PATH, 'video', 'video_t.html')

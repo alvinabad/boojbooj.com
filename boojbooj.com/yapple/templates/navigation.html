@@ -6,8 +6,8 @@
         src="/static/images/boojbooj_logo.jpg" />
     </div>
      -->
-    <div id="logoname">b<span style="color: orange;">o</span>o<span style="color: lavender;">j</span>b<span style="color: orange;">o</span>o<span style="color: lavender;">j</span>
-    </div>
+    {% include 'templates/logo.html' %}
+    
     <div class="tabs"> <a href="/">Home</a> </div>
     {% if False %}
     <div class="tabs"> <a href="/account/">MyAccount</a> </div>
@@ -17,7 +17,15 @@
     <div class="tabs"> <a href="http://boojbooj.wordpress.com/">Blog</a> </div>
     
     <div id="header_login">
-  {% if not info.username %}
+  {% if info.username %}
+    {% if info.twitter_username %}
+      <a target="_blank" href="http://twitter.com/{{info.twitter_username}}"> <b>{{info.username}}</b> </a> | 
+    {% else %}
+      <b>{{info.username}}</b> | 
+    {% endif %}
+    <a href="/account/logout?prev_url={{ info.full_path }}">(not you?) Logout</a>
+
+  {% else %}
     {% if False %}
     <a href="/account/login">Login: </a>
     <a href="/account/google_auth"">
@@ -30,15 +38,8 @@
       <img class="icon" src="http://assets1.twitter.com/images/favicon.png" />
       Login using your Twitter account
       </a>
-    
-  {% else %}
-    {% if info.twitter_username %}
-      <a target="_blank" href="http://twitter.com/{{info.twitter_username}}"> <b>{{info.username}}</b> </a> | 
-    {% else %}
-      <b>{{info.username}}</b> | 
-    {% endif %}
-    <a href="/account/logout?prev_url={{ info.full_path }}">(not you?) Logout</a>
   {% endif %}
+    
   </div>
     
 </div>
