@@ -165,7 +165,7 @@ div.clear {
 	width: 835px;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 #youtube_div {
 	/*border: 1px solid gray; */
