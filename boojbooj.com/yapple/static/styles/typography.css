@@ -14,7 +14,6 @@ a {
     font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
 }
 #navigation a {
-    font-weight: bold;
     text-decoration: none;
 }
 #content {
@@ -55,5 +54,5 @@ h6 {
     font-weight: bold;
     //font-family: "Times New Roman";
     font-family: "Georgia", sans-serif;
-    color: yellow;
+    color: white;
 }
