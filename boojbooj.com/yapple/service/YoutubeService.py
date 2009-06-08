@@ -2,6 +2,10 @@ import simplejson as json
 import urllib2
 from StringIO import StringIO
 
+import gdata.youtube
+import gdata.youtube.service
+client = gdata.youtube.service.YouTubeService()
+
 
 MOST_POPULAR_URL = "http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?alt=json"
 #http://gdata.youtube.com/feeds/api/standardfeeds/most_viewed
@@ -25,15 +29,56 @@ class YoutubeService:
         
         return self.most_popular_list
         
+
+    def getMostViewedVideos(self):
+        videos = []
+        feed = client.GetMostViewedVideoFeed()
+        
+        for entry in feed.entry:
+            video = {}
+            id = entry.id.text.split("/")
+            num = len(id)
+            id = id[num-1]
+            
+            video['title'] = entry.title.text
+            video['id'] = id
+            video['img'] = "http://img.youtube.com/vi/%s/default.jpg" % id
+            video['url'] = "/yt/%s" % id
+            
+            videos.append(video)
+            
+        return videos
+          
+    def getMostViewedVideos2(self):
+        videos = []
+        feed = client.GetMostViewedVideoFeed()
+        return feed.entry
     
+        for entry in feed.entry:
+            video = {}
+            id = entry.id.text.split("/")
+            num = len(id)
+            id = id[num-1]
+            
+            video['title'] = entry.title.text
+            video['id'] = id
+            video['img'] = "http://img.youtube.com/vi/%s/default.jpg" % id
+            video['url'] = "/yt/%s" % id
+            
+            videos.append(video)
+            
+        return videos
+          
+        
+        
 if __name__ == '__main__':
     ys = YoutubeService()
-    mp = ys.getMostPopularVideos()
-    #print mp['feed']
-    #feed = mp['feed']
-    #print list
-    #print feed['link']
-    #print mp.keys()
-    #for key in mp['feed'].keys():
-    #    print key
-    print mp['feed']['link']    
+    
+    video = ys.getMostViewedVideos2()[0]
+    #for video in ys.getMostViewedVideos2():
+    #    print video.media
+     
+    print video.title
+    print video.player
+    print video.title   
+        

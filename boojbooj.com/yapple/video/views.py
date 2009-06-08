@@ -9,6 +9,8 @@ import random
 import re
 
 from video.VideoMessages import VideoMessages
+from service.YoutubeService import YoutubeService
+
 from utils import logger
 log = logger.log
 
@@ -51,8 +53,12 @@ def index(request, video_id=None):
     video_url = "http://" + request.get_host() + "/yt/%s" % video_id
     
     vm = VideoMessages()       
+    yt = YoutubeService()
+    
     #info['video_urls'] = vm.getVideoUrls()
     info['video_urls'] = vm.getVideos()
+    info['yt_videos'] = yt.getMostViewedVideos()
+    
     info['message'] = "Add comments to your favorite YouTube videos"
     info['youtube_url'] = youtube_url  
     info['video_url'] = video_url  

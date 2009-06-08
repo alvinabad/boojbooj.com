@@ -51,17 +51,15 @@
   
   <div class="content_inner">
     <div id="youtube_info">
-    <h1 class="header">Top YouTube Videos</h1>
+    <h1 class="header">Most Viewed YouTube Videos</h1>
       <div id="most_popular_div">
       <ol>
-      {% for video in info.video_urls %}
+      {% for video in info.yt_videos %}
         <li>
         <a href="{{ video.url }}">
         <img style="float: left; margin-right: 5px; height: 50px; border: 0;" src="{{ video.img }}" 
              alt="{{ video.url }}" /></a>
-        Youtube ID: <a href="{{ video.url }}">{{ video.id }}</a>
-        <br />
-        Comments: {{ video.num_msgs }}
+        <a href="{{ video.url }}">{{ video.title }}</a>
         </li>
         <div style="clear: both;"></div>
         <br />
