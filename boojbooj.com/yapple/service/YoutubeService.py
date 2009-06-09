@@ -32,7 +32,30 @@ class YoutubeService:
 
     def getMostViewedVideos(self):
         videos = []
-        feed = client.GetMostViewedVideoFeed()
+        uri = gdata.youtube.service.YOUTUBE_STANDARD_MOST_VIEWED_URI
+        uri = "%s?time=this_week" % uri
+        
+        #feed = client.GetMostViewedVideoFeed()
+        feed = client.GetYouTubeVideoFeed(uri)
+        
+        for entry in feed.entry:
+            video = {}
+            id = entry.id.text.split("/")
+            num = len(id)
+            id = id[num-1]
+            
+            video['title'] = entry.title.text
+            video['id'] = id
+            video['img'] = "http://img.youtube.com/vi/%s/default.jpg" % id
+            video['url'] = "/yt/%s" % id
+            
+            videos.append(video)
+            
+        return videos
+          
+    def getTopFavoritesVideos(self):
+        videos = []
+        feed = client.GetTopFavoritesVideoFeed()
         
         for entry in feed.entry:
             video = {}
