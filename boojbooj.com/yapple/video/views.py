@@ -35,7 +35,8 @@ def index(request, video_id=None):
         youtube_url = "http://www.youtube.com/watch?v=%s" % video_id
         
     if youtube_url is None:
-        youtube_url = random.choice(settings.YOU_TUBE_URLS)
+        #youtube_url = random.choice(settings.YOU_TUBE_URLS)
+        youtube_url = settings.DEFAULT_YOUTUBE_URL
         video_id = None
         
     # extract video_id from video_url
